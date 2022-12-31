@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --orange: #FE6903;
+  --bodyColor: #ECEEED;
+  --blue: #0D4290;
+  --white: #ffff;
+  --dark1: #2D2D2D;
+  --dark2: #505050;
+  --dark3: #9C9C9C;
+  --dark4: #C2C2C2;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--bodyColor);
+  font-family: 'Jost', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jost', sans-serif;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
+
+
+
+.navbar a, .navbar a:focus {
+  color: var(--blue);
+}
+
+
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: var(--orange);
+  
+}
