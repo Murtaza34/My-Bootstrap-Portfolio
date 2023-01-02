@@ -5,7 +5,7 @@
 :root {
   --orange: #FE6903;
   --bodyColor: #ECEEED;
-  --blue: #0D4290;
+  --blue: #124faa;
   --white: #ffff;
   --dark1: #2D2D2D;
   --dark2: #505050;
@@ -17,7 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -37,33 +36,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------ Navigation ------ */
-
 .navbar{
   background-color: var(--white);
 }
 
-.navbar a, .navbar a:focus {
+.navbar-nav a {
+  margin: 0 10px;
   color: var(--blue);
+  font-weight: 500;
 }
 
-.navbar-nav .active:active {
+ .nav-link a:active {
   color: var(--orange) !important;
-  }
-
-  .navbar a i, .navbar a:focus i {
-  font-size: 12px;
 }
-
 
 .navbar-nav li:hover > a {
   color: var(--orange);
-  
+} 
+
+.navbar-nav li:active > a {
+  color: var(--dark4);
 } 
 
 /* ------ Hero Section ------ */
-section.masthead {
-  padding-top: 146px;
+.masthead {
+  height: 100vh;
+  padding-top: 240px;
   padding-bottom: 146px;
+  background-image: url(/images/Shiny\ Overlay.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .masthead-heading {
@@ -75,7 +77,7 @@ section.masthead {
 }
 
 .masthead-subheading {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .span-name {
@@ -83,15 +85,15 @@ section.masthead {
 }
 
 .masthead-avatar {
-  width: 280px;
+  width: 260px;
   margin-bottom: 0px !important;
   
 }
 
 /*----- Hero MD Screen Responsive -----*/
 @media (max-width: 992px) {
-  section.masthead {
-    padding-top: 82px;
+  .masthead {
+    padding-top: 300px;
     padding-bottom: 6rem;
   }
   .masthead .masthead-heading {
@@ -108,21 +110,98 @@ section.masthead {
 
 /*----- Hero SM Screen Responsive -----*/
 @media (max-width: 768px) {
-  section.masthead {
-    padding-top: 82px;
+  .masthead {
+    padding-top: 300px;
     padding-bottom: 6rem;
   }
   .masthead .masthead-heading {
-    font-size: 2.9rem;
-    line-height: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 3.5rem;
     margin-top: 30px !important;
     margin-bottom: 30px !important;
   }
   .masthead .masthead-subheading {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
-.chevron-down-icon {
+/* --------- Chevron Down Icon --------- */
+.chevron-down {
+  color: var(--orange);
+  margin-top: 120px;
+  cursor: pointer;
+}
+
+.chevron-down:hover  {
   color: var(--orange);
 }
+
+/* --------- About Me Section --------- */
+.page-section-about {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  background-color: var(--blue);
+}
+
+.page-section-heading-about {
+  margin-bottom: 50px;
+  color: var(--orange);
+  font-size: 2.5rem;
+}
+
+.page-section-subheading {
+  font-size: 20px;
+  color: var(--dark2);
+}
+
+/*------ Skills Section ---*/
+.page-section-skills {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  background-color: var(--bodyColor);
+}
+
+.page-section-heading-skills {
+  margin-bottom: 15px;
+  color: var(--blue);
+  font-size: 2.5rem;
+}
+
+.progress {
+  height: 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .progress {
+  background-image: -webkit-gradient(linear,left 0,left 100%,from(#d3d3d3),to(#f5f5f5));
+  background-image: -webkit-linear-gradient(top,#ebebeb 0,#f5f5f5 100%);
+  background-image: -moz-linear-gradient(top,#ebebeb 0,#f5f5f5 100%);
+  background-image: linear-gradient(to bottom,#ebebeb 0,#f5f5f5 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb',endColorstr='#fff5f5f5',GradientType=0);
+  }
+  .progress {
+  height: 15px;
+  background-color: #e0e0e0;
+  background-image: none;
+  box-shadow: none;
+  }
+  .progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+  -webkit-transition: width .6s ease;
+  transition: width .6s ease;
+  }
+  
