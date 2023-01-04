@@ -69,9 +69,9 @@ h6 {
   height: 100vh;
   padding-top: 300px;
   padding-bottom: 136px;
-  background-image: url(/images/dark-background.svg) !important;
+  background: url(/images/background.svg) !important;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .masthead-heading {
