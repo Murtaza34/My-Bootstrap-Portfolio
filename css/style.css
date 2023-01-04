@@ -202,9 +202,32 @@ h6 {
 }
 
 #css {
-padding-right: 0 !important;
+  padding-right: 0 !important;
 }
 
+#javascript {
+  padding-left: 0 !important;
+}
+
+#bootstrap {
+  padding-right: 0 !important;
+}
+
+/*----- Progress Bar MD Screen Responsive -----*/
+@media (max-width: 992px) {
+  #html, #css, #javascript, #bootstrap{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .app-icon {
+    
+  }
+}
+
+/*----- Progress bar SM Screen Responsive -----*/
+@media (max-width: 768px) {
+}
 
 .precentage {
   font-size: 18px;
@@ -222,4 +245,44 @@ padding-right: 0 !important;
 
 .app-name {
   font-size: 20px;
+}
+
+/* -------------- divider ------------- */
+.wrapper
+{
+	padding-bottom: 10px;
+}
+
+.divider
+{
+	position: relative;
+	margin-top: 90px;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+
+/* ------- Projects Section -------- */
+
+.page-section-projects {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  background-color: var(--bodyColor);
+}
+
+.page-section-heading-projects {
+  margin-bottom: 15px;
+  color: var(--blue);
+  font-size: 2.5rem;
 }
