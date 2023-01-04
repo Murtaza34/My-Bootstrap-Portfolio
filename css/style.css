@@ -69,7 +69,7 @@ h6 {
   height: 100vh;
   padding-top: 300px;
   padding-bottom: 136px;
-  background-image: url(/images/Shiny\ Overlay.svg);
+  background-image: url(./images/Shiny\ Overlay.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
