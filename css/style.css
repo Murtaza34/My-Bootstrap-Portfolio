@@ -152,6 +152,7 @@ h6 {
   margin-bottom: 50px;
   color: var(--orange);
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .page-section-subheading {
@@ -170,14 +171,17 @@ h6 {
   margin-bottom: 15px;
   color: var(--blue);
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .page-section-subheading {
-  margin-top: 70px;
-  margin-bottom: 40px;
+  /* margin-top: 70px;
+  margin-bottom: 20px; */
+  font-size: 1.4rem;
+  color: #9c9c9c;
 }
 
-.progress {
+/* .progress {
   height: 30px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -211,10 +215,10 @@ h6 {
 
 #bootstrap {
   padding-right: 0 !important;
-}
+} */
 
 /*----- Progress Bar MD Screen Responsive -----*/
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   #html,
   #css,
   #javascript,
@@ -225,10 +229,10 @@ h6 {
 
   .app-icon {
   }
-}
+} */
 
 /*----- Progress bar SM Screen Responsive -----*/
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 }
 
 .precentage {
@@ -247,6 +251,34 @@ h6 {
 
 .app-name {
   font-size: 20px;
+} */
+
+.list-icons{
+  font-size: 4.6rem;
+}
+
+.list-inline-item {
+  position: relative;
+}
+
+.list-inline-item:hover i {
+  /* transform: translateY(-10px); */
+ color: #7cb518;
+ transition: 0.3s ease-in-out;
+}
+
+.list-inline-item h6 {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: #7cb518;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.list-inline-item:hover h6 {
+  opacity: 1;
 }
 
 /* -------------- divider ------------- */
@@ -268,24 +300,96 @@ h6 {
   right: 5%;
   width: 90%;
   height: 1px;
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    rgb(87, 87, 87),
-    transparent
-  );
+  background-image: linear-gradient(to right, transparent, rgb(87, 87, 87), transparent);
 }
 
 /* ------- Projects Section -------- */
 
 .page-section-projects {
   padding-top: 120px;
-  padding-bottom: 130px;
+  padding-bottom: 120px;
   background-color: var(--bodyColor);
 }
 
 .page-section-heading-projects {
-  margin-bottom: 15px;
+  margin-bottom: 100px;
   color: var(--blue);
   font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* ------ Portfolio Cards ------- */
+
+.portfolio-gallery {
+  height: 330px !important;
+}
+
+.inner-box {
+  position: relative;
+}
+
+.inner-box .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-box .image img {
+  position: relative;
+  width: auto;
+  height: auto;
+  /* display: block; */
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.inner-box .image .overlay-box {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+  /* change the opacity back to 0  */
+  opacity: 1;
+  display: block;
+  transition: all 0.6s ease;
+  overflow: hidden;
+}
+
+.inner-box .image .overlay-box:before {
+  position: absolute;
+  content: "";
+  left: -650px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: all 0.5s ease;
+  background-color: rgba(226, 224, 100, 0.8);
+}
+
+.inner-box .image .overlay-box h5 {
+  text-decoration: none;
+  position: relative;
+  left: 0px;
+}
+
+.inner-box:hover .image img {
+  /* -webkit-transform: scale(1.1); */
+  transform: scale(1.06);
+  filter: blur(3px);
+}
+
+.inner-box:hover .image .overlay-box:before {
+  opacity: 1;
+  left: 0px;
+}
+
+.inner-box:hover .image .overlay-box {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-decoration: none;
 }
